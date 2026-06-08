@@ -5,6 +5,11 @@ for any Macau bus route from the official **DSAT (交通事務局) 巴士報站*
 
 > Target URL: <https://www.dsat.gov.mo/bus/site/busstopwaiting.aspx?lang=tc>
 
+> 🤖 **If you're an AI agent:** read [`AGENTS.md`](./AGENTS.md) first. The
+> longer technical content (page structure, token mechanism, etc.) lives in
+> [`docs/architecture.md`](./docs/architecture.md). Caveats and workarounds
+> are in [`docs/known-issues.md`](./docs/known-issues.md).
+
 ---
 
 ## TL;DR
@@ -210,3 +215,12 @@ the problem.
   (faster, headless server friendly).
 
 Just say the word.
+
+---
+
+## 📚 Related
+
+- [`AGENTS.md`](./AGENTS.md) — AI agent guide (purpose, structure, troubleshooting)
+- [`docs/architecture.md`](./docs/architecture.md) — page structure, token mechanism
+- [`docs/known-issues.md`](./docs/known-issues.md) — caveats and workarounds
+- [`docs/changelog.md`](./docs/changelog.md) — release notes
