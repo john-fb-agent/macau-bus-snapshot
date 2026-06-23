@@ -2,7 +2,8 @@
 
 **Created:** 2026-06-11 18:43 (updated 2026-06-12 08:04 — added 34;
 updated 2026-06-12 19:08 — scope now 30, 34; re-requested 2026-06-15 17:38;
-added MT3 on 2026-06-15 18:56; refresh 30+34 requested 2026-06-22 19:05)
+added MT3 on 2026-06-15 18:56; refresh 30+34 requested 2026-06-22 19:05;
+**refresh 30+34 requested 2026-06-23 19:15**)
 **Status:** In Progress
 **Model:** minimax/MiniMax-M2.7-highspeed
 **Related Issue:** —
@@ -32,9 +33,11 @@ Prior captures in this thread: 52, MT2, 34 (commit 465d38f, 2026-06-12 08:04);
 - [x] Run `snapshot.js 30 34` (done 2026-06-12 19:10, commit 5b6295d)
 - [x] Run `snapshot.js 30 34` (refresh — 2026-06-15 17:38, commit 66cf6eb)
 - [x] Run `snapshot.js MT3 30 34` (refresh — 2026-06-15 18:56, all 3 screenshots updated)
-- [ ] Run `snapshot.js 30 34` (refresh — 2026-06-22 19:05)
+- [x] Run `snapshot.js 30 34` (refresh — 2026-06-22 19:05)
 - [x] Review captured output (bus positions for each route)
-- [ ] Commit the refreshed screenshots
+- [x] Commit the refreshed screenshots (commit 1fb2d5e)
+- [ ] Run `snapshot.js 30 34` (refresh — 2026-06-23 19:15)
+- [ ] Review captured output + commit refreshed screenshots
 - [ ] ⚠️ Ask user to confirm completion before deleting this file
 
 ---
