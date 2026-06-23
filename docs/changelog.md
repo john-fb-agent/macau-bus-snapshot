@@ -4,6 +4,28 @@
 
 ---
 
+## 2026-06-23 — Documented the snapshot workflow
+
+**What's in this commit:**
+
+- **`docs/snapshot-workflow.md`** — fast-path procedure for recurring
+  bus snapshot refreshes. Captures: when to skip the full
+  github-repo-dev ceremony, how to parse the `routestation/bus`
+  response, the canonical output format (with worked example),
+  the ~27s speed budget, and a list of don'ts.
+- **Canonical output template** matches what John expects:
+  one bullet per bus, route-order sorted, `MEDIA:` attachments
+  inline, 改道消息 banner called out per route, follow-up question
+  at the end.
+
+**No code changes** — `snapshot.js` unchanged. The procedure doc
+is the deliverable; speed optimizations to the script are tracked
+separately.
+
+🤖 Model: minimax/MiniMax-M2.7-highspeed
+
+---
+
 ## 2026-06-08 — Initial release
 
 **What's in this commit:**
