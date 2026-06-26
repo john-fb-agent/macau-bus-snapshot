@@ -1,6 +1,6 @@
 # Task: Capture fresh snapshots for routes MT3, 30, 34
 
-**Created:** 2026-06-11 18:43 (updated 2026-06-12 08:04 — added 34; updated 2026-06-12 19:08 — scope now 30, 34; re-requested 2026-06-15 17:38; added MT3 on 2026-06-15 18:56; refresh 30+34 requested 2026-06-22 19:05; refresh 30+34 requested 2026-06-23 19:15; **test run 2026-06-23 19:24, timing the new procedure**; refresh **11, 30, 34, MT2** requested 2026-06-24 18:43)
+**Created:** 2026-06-11 18:43 (updated 2026-06-12 08:04 — added 34; updated 2026-06-12 19:08 — scope now 30, 34; re-requested 2026-06-15 17:38; added MT3 on 2026-06-15 18:56; refresh 30+34 requested 2026-06-22 19:05; refresh 30+34 requested 2026-06-23 19:15; **test run 2026-06-23 19:24, timing the new procedure**; refresh **11, 30, 34, MT2** requested 2026-06-24 18:43; refresh **11, MT2** requested 2026-06-24 18:45; refresh **30, 34** requested 2026-06-26 08:24)
 **Status:** In Progress
 **Model:** minimax/MiniMax-M2.7-highspeed
 **Related Issue:** —
@@ -35,7 +35,11 @@ Prior captures in this thread: 52, MT2, 34 (commit 465d38f, 2026-06-12 08:04);
 - [x] Commit the refreshed screenshots (commit 1fb2d5e)
 - [x] Run `snapshot.js 30 34` (refresh — 2026-06-23 19:15)
 - [x] Run `snapshot.js 30 34` (test — 2026-06-23 19:24, timing the new procedure)
-- [ ] Run `snapshot.js 11 30 34 MT2` (refresh — 2026-06-24 18:43)
+- [x] Run `snapshot.js 11 30 34 MT2` (refresh — 2026-06-24 18:43, commit 9494d30)
+- [x] Review captured output + commit refreshed screenshots (commit 9494d30)
+- [x] Run `snapshot.js 11 MT2` (refresh — 2026-06-24 18:45, commit 8bed338)
+- [x] Review captured output + commit refreshed screenshots
+- [ ] Run `snapshot.js 30 34` (refresh — 2026-06-26 08:24)
 - [ ] Review captured output + commit refreshed screenshots
 - [ ] ⚠️ Ask user to confirm completion before deleting this file
 
@@ -45,7 +49,7 @@ Prior captures in this thread: 52, MT2, 34 (commit 465d38f, 2026-06-12 08:04);
 
 **Repo:** `john-fb-agent/macau-bus-snapshot`
 **Branch:** `main`
-**Routes requested:** MT3, 30, 34 (this run)
+**Routes requested:** 30, 34 (this run)
 **Detour status observed 2026-06-15 17:38:** Both routes 30 and 34
 showed 改道消息 (detour in effect). Worth re-checking after this run.
 **Note on prior repo-issue.md (2026-06-08):** The older doc-creation
