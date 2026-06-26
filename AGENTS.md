@@ -49,8 +49,12 @@ macau-bus-snapshot/
 ├── README.md           ← Human-facing overview + quick start
 ├── repo-issue.md       ← Task tracker (delete after each task)
 ├── snapshot.js         ← The working script (Node + Playwright)
-├── route-52.png        ← Sample screenshot, route 52
-├── route-MT2.png       ← Sample screenshot, route MT2
+├── route-*.png         ← Screenshots from the most recent run
+├── skills/
+│   └── macau-bus-snapshot/  ← Self-contained OpenClaw skill bundle
+│       ├── SKILL.md         ← Skill frontmatter + procedure
+│       ├── scripts/snapshot.js (mirror of root)
+│       └── references/      ← architecture, known-issues, quick-reference
 └── docs/
     ├── architecture.md ← Why headless browser, page structure, token mechanism
     ├── known-issues.md ← What can go wrong + workarounds
@@ -58,7 +62,8 @@ macau-bus-snapshot/
 ```
 
 This is intentionally tiny. Do not add `src/`, `tests/`, `data/`, `deployment/`,
-`ci/`, or any other directories unless explicitly asked.
+`ci/`, or any other directories unless explicitly asked. The `skills/` subtree
+exists only because the OpenClaw skill bundle must be self-contained.
 
 ---
 
@@ -89,8 +94,11 @@ NODE_PATH=/home/js/.npm-global/lib/node_modules/@playwright/mcp/node_modules \
 Default (no args) = routes 52 and MT2. Pass any route labels you see on
 the home grid (e.g. `3`, `11`, `26A`, `MT1`, `H1`).
 
-Per-route cost: ~6 seconds (page load + click + wait). Don't hammer it —
-DSAT is a government service. Once every 30–60s is plenty.
+Add `--json-only` to skip PNG screenshots (saves ~1-2s per route).
+
+Per-route cost: ~3-5s (page load + click + wait) on v3 (2026-06-26).
+Total for 2 routes is ~7-10s vs ~13s in v2. Don't hammer it — DSAT is
+a government service. Once every 30–60s is plenty.
 
 ---
 
@@ -105,6 +113,18 @@ Per the github-repo-dev skill:
 5. **Update docs** (`docs/changelog.md` at minimum) when shipping.
 6. **Commit** with the model attribution line.
 7. **Ask the user** to confirm completion before deleting `repo-issue.md`.
+
+## 🧩 OpenClaw skill (skills/macau-bus-snapshot/)
+
+This repo also ships a **self-contained OpenClaw skill bundle** at
+`skills/macau-bus-snapshot/`. It mirrors the repo-root script and
+references, and is what gets registered with `skill_workshop`.
+
+When updating `snapshot.js` at the repo root, also update
+`skills/macau-bus-snapshot/scripts/snapshot.js`. Same content in both.
+
+After committing a change here, re-create the skill workshop proposal
+from the updated bundle if you want the live skill to pick up the change.
 
 ---
 

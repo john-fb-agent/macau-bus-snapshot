@@ -4,6 +4,44 @@
 
 ---
 
+## 2026-06-26 — v3 perf + OpenClaw skill bundle
+
+**What's in this commit:**
+
+- **`snapshot.js` v3** — switched from a fixed `waitForTimeout(2500ms)`
+  after every click to `page.waitForResponse` on the `routestation/bus`
+  endpoint. Initial-load wait now keys off `getRouteAndCompanyList`
+  (which the home grid actually calls), not the bus API. Added a
+  `--json-only` flag to skip PNG screenshots.
+
+  Measured on the OpenClaw coder host (DSAT was moderately slow today):
+
+  | Mode | 2 routes | 3 routes |
+  |---|---|---|
+  | v2 (previous) | ~13s | ~19s |
+  | v3 (this) — `--json-only` | ~7s | ~14s |
+  | v3 (this) — with screenshots | ~10s | ~18s |
+
+- **`skills/macau-bus-snapshot/`** — new self-contained OpenClaw skill
+  bundle. Contents:
+  - `SKILL.md` — frontmatter + procedure, triggers on bus / 巴士報站 / DSAT requests
+  - `scripts/snapshot.js` — mirror of the repo-root script
+  - `references/architecture.md` — page structure + token mechanism
+  - `references/known-issues.md` — caveats and workarounds
+  - `references/quick-reference.md` — CLI options, output schema, the
+    canonical Markdown reply template + speed budgets
+
+  The skill can be registered with OpenClaw via `skill_workshop
+  action=create` (then `action=apply` once approved).
+
+- **`AGENTS.md`** — added a `skills/` section explaining the bundle and
+  the rule that `skills/macau-bus-snapshot/scripts/snapshot.js` must
+  mirror the repo-root script.
+
+🤖 Model: minimax/MiniMax-M2.7-highspeed
+
+---
+
 ## 2026-06-23 — Documented the snapshot workflow
 
 **What's in this commit:**
